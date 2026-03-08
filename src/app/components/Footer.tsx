@@ -86,15 +86,29 @@ export function Footer() {
 
             {/* Contact Button */}
             <a
-              href="tel:+91"
+              href="tel:+919999111800"
               className="flex items-center gap-3 px-4 py-3 bg-teal-50 border border-teal-200 rounded-xl hover:bg-teal-100 transition-all duration-300 group w-fit"
             >
               <div className="p-2 bg-teal-100 rounded-lg group-hover:bg-teal-200 transition-all">
                 <Phone className="w-4 h-4 text-teal-600" />
               </div>
               <div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Get In Touch</div>
-                <div className="text-sm font-medium text-gray-900">Contact Us</div>
+                <div className="text-xs text-gray-600 uppercase tracking-wide">Call Us</div>
+                <div className="text-sm font-medium text-gray-900">+91 9999111800</div>
+              </div>
+            </a>
+
+            {/* Email Button */}
+            <a
+              href="mailto:support@igtps.com"
+              className="flex items-center gap-3 px-4 py-3 bg-teal-50 border border-teal-200 rounded-xl hover:bg-teal-100 transition-all duration-300 group w-fit"
+            >
+              <div className="p-2 bg-teal-100 rounded-lg group-hover:bg-teal-200 transition-all">
+                <Headphones className="w-4 h-4 text-teal-600" />
+              </div>
+              <div>
+                <div className="text-xs text-gray-600 uppercase tracking-wide">Email Us</div>
+                <div className="text-sm font-medium text-gray-900">support@igtps.com</div>
               </div>
             </a>
 

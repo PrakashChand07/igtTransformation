@@ -63,7 +63,7 @@ export function ThankYouModal({ isOpen, onClose }: ThankYouModalProps) {
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal-600 to-teal-500 flex items-center justify-center flex-shrink-0 border-2 border-zinc-800">
                 <span className="text-white text-xl font-medium">AM</span>
               </div>
-              
+
               <div className="flex-1">
                 <p className="text-white font-medium mb-1">Your Account Manager</p>
                 <p className="text-sm text-zinc-400 mb-2">PropTech Solutions Team</p>
@@ -95,7 +95,7 @@ export function ThankYouModal({ isOpen, onClose }: ThankYouModalProps) {
 
           {/* WhatsApp Button */}
           <button
-            onClick={() => window.open('https://wa.me/919876543210?text=Hi, I just submitted a request', '_blank')}
+            onClick={() => window.open('https://wa.me/919999111800?text=Hi, I just submitted a request', '_blank')}
             className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white py-3 px-6 rounded-xl font-medium transition-all duration-300 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-5 h-5" />

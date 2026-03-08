@@ -2,7 +2,6 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { Send } from 'lucide-react';
-import { createZohoLead } from '../../services/zohoService';
 
 interface ConversionFormData {
   fullName: string;
@@ -25,11 +24,11 @@ export function ConversionForm({ onFormSubmit }: ConversionFormProps) {
     setIsLoading(true);
     setErrorMsg('');
 
-    const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY;
-    const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL;
+    const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY as string;
+    const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL as string;
 
     // ── Run Brevo email + Zoho CRM lead creation SIMULTANEOUSLY ──
-    const [brevoResult, zohoResult] = await Promise.allSettled([
+    const [brevoResult] = await Promise.allSettled([
       // 1️⃣  Brevo Email
       fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
@@ -78,21 +77,8 @@ export function ConversionForm({ onFormSubmit }: ConversionFormProps) {
           `,
         }),
       }),
-
-      // 2️⃣  Zoho CRM Lead
-      createZohoLead(data),
     ]);
 
-    // Log Zoho result for debugging
-    if (zohoResult.status === 'fulfilled') {
-      if (zohoResult.value.success) {
-        console.log('[Zoho] Lead created ✅ ID:', zohoResult.value.zohoId);
-      } else {
-        console.warn('[Zoho] Lead creation issue:', zohoResult.value.error);
-      }
-    } else {
-      console.error('[Zoho] Promise rejected:', zohoResult.reason);
-    }
 
     // Brevo result decide karega success/error UI
     if (brevoResult.status === 'fulfilled' && brevoResult.value.ok) {

@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { Send } from 'lucide-react';
-import { createZohoLead } from '../../services/zohoService';
+
 
 interface EnquiryFormData {
   fullName: string;
@@ -31,22 +31,22 @@ export function EnquiryForm({
     setIsLoading(true);
     setErrorMsg('');
 
-    // ── Run Brevo email + Zoho CRM lead creation SIMULTANEOUSLY ──
-    const [brevoResult, zohoResult] = await Promise.allSettled([
+    // ── Run Brevo email ──
+    const [brevoResult] = await Promise.allSettled([
       // 1️⃣  Brevo Email
       fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
           'accept': 'application/json',
-          'api-key': import.meta.env.VITE_BREVO_API_KEY,
+          'api-key': import.meta.env.VITE_BREVO_API_KEY as string,
           'content-type': 'application/json',
         },
         body: JSON.stringify({
           sender: {
             name: 'Luxury Real Estate Landing Page',
-            email: import.meta.env.VITE_CONTACT_EMAIL,
+            email: import.meta.env.VITE_CONTACT_EMAIL as string,
           },
-          to: [{ email: import.meta.env.VITE_CONTACT_EMAIL, name: 'Admin' }],
+          to: [{ email: import.meta.env.VITE_CONTACT_EMAIL as string, name: 'Admin' }],
           subject: `🏢 New Enquiry: ${data.service} - ${data.fullName}`,
           htmlContent: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0f0f0f; border: 2px solid #14b8a6; border-radius: 12px; overflow: hidden;">
@@ -82,20 +82,7 @@ export function EnquiryForm({
         }),
       }),
 
-      // 2️⃣  Zoho CRM Lead
-      createZohoLead(data),
     ]);
-
-    // Log Zoho result for debugging
-    if (zohoResult.status === 'fulfilled') {
-      if (zohoResult.value.success) {
-        console.log('[Zoho] Lead created ✅ ID:', zohoResult.value.zohoId);
-      } else {
-        console.warn('[Zoho] Lead creation issue:', zohoResult.value.error);
-      }
-    } else {
-      console.error('[Zoho] Promise rejected:', zohoResult.reason);
-    }
 
     // Brevo result decide karega success/error UI
     if (brevoResult.status === 'fulfilled' && brevoResult.value.ok) {

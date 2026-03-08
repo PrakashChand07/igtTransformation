@@ -9,11 +9,11 @@ export function FloatingActionBar() {
   const [showThankYou, setShowThankYou] = useState(false);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210?text=Hi, I want to know more about PropTech solutions', '_blank');
+    window.open('https://wa.me/919999111800?text=Hi, I want to know more about PropTech solutions', '_blank');
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:+919876543210';
+    window.location.href = 'tel:+919999111800';
   };
 
   const handleGetQuote = () => {

@@ -16,7 +16,7 @@ export const sendEmail = async (data: any) => {
         'api-key': BREVO_API_KEY,
       },
       body: JSON.stringify({
-        sender: { email: CONTACT_EMAIL, name: "Luxury Real Estate Landing Page" },
+        sender: { email: CONTACT_EMAIL, name: "IG Transformation Partners" },
         to: [{ email: CONTACT_EMAIL, name: "Admin" }],
         subject: `New Enquiry from ${data.fullName} - ${data.service}`,
         htmlContent: `

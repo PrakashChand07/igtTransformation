@@ -80,7 +80,7 @@ export function Footer() {
               <img
                 src='/assets/logo.png'
                 alt="IG Transformation Partners"
-                className="h-24 w-auto cursor-pointer"
+                className="h-24 w-auto cursor-pointer mb-4"
               />
             </Link>
 

@@ -31,7 +31,7 @@ export function Header() {
               <img
                 src='/assets/logo.png'
                 alt="IG Transformation Partners"
-                className="h-16 sm:h-20 w-auto cursor-pointer"
+                className="h-16 sm:h-20 lg:h-24 w-auto cursor-pointer"
               />
             </Link>
 

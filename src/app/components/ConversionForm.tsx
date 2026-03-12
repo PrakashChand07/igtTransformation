@@ -100,7 +100,7 @@ export function ConversionForm({ onFormSubmit }: ConversionFormProps) {
   };
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-12 lg:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/80 to-zinc-950" />
 
       {/* Grid Pattern */}

@@ -100,7 +100,7 @@ export function HeroSection({ onFormSubmit }: HeroSectionProps) {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-14 md:pt-20">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -120,7 +120,7 @@ export function HeroSection({ onFormSubmit }: HeroSectionProps) {
         }} />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-10 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div

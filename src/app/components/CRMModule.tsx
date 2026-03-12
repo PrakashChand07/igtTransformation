@@ -11,11 +11,11 @@ export function CRMModule() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-6 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Dashboard Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -27,11 +27,11 @@ export function CRMModule() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/10 via-amber-500/10 to-teal-500/10 rounded-3xl blur-2xl" />
-              
+
               {/* Dashboard Container */}
               <div className="relative bg-zinc-900/90 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 shadow-2xl">
                 {/* Header Bar */}
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-zinc-800/50">
+                <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-zinc-800/50">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
                       <Bot className="w-5 h-5 text-white" />
@@ -48,7 +48,7 @@ export function CRMModule() {
                 </div>
 
                 {/* Stats Cards */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="bg-zinc-950/50 border border-zinc-800/50 rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <TrendingUp className="w-4 h-4 text-teal-400" />
@@ -111,18 +111,18 @@ export function CRMModule() {
             transition={{ duration: 0.8 }}
             className="order-1 lg:order-2"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-4 sm:mb-6">
               <span className="text-sm text-amber-300">Module A</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-4 sm:mb-6">
               Custom CRM Built for
               <span className="block bg-gradient-to-r from-teal-400 to-amber-400 bg-clip-text text-transparent mt-2">
                 Indian Sales Teams
               </span>
             </h2>
 
-            <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
+            <p className="text-lg text-zinc-400 mb-6 lg:mb-8 leading-relaxed">
               A powerful, fully customizable CRM designed specifically for Indian sales teams. Manage leads, automate follow-ups, track performance, and close deals faster — all in one easy-to-use platform built for the Indian market.
             </p>
 
@@ -144,10 +144,13 @@ export function CRMModule() {
               ))}
             </div>
 
-            <div className="mt-10 p-6 bg-zinc-900/40 border border-zinc-800/50 rounded-xl backdrop-blur-sm">
-              <p className="text-sm text-zinc-400 italic">
-                "No monthly fees. No data lock-in. Complete source code ownership. Deploy on your infrastructure or ours."
-              </p>
+            <div className="mt-8 lg:mt-10 relative group">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500/30 to-amber-500/30 rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-500" />
+              <div className="relative p-6 bg-zinc-950/80 border border-zinc-800/80 rounded-xl backdrop-blur-sm">
+                <p className="text-sm md:text-base font-medium text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-amber-200 italic text-center">
+                  "No monthly fees. No data lock-in. <span className="text-white font-semibold">Complete source code ownership.</span> Deploy on your infrastructure or ours."
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

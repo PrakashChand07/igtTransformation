@@ -20,7 +20,7 @@ export function TrustBar() {
   return (
     <section className="relative py-6 border-y border-zinc-800/50 bg-zinc-950/60 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 sm:gap-8 md:gap-16 w-fit mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -30,7 +30,7 @@ export function TrustBar() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex items-center gap-3 group"
             >
-              <div className="relative">
+              <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-teal-500/20 blur-lg rounded-full group-hover:bg-teal-500/30 transition-all duration-300" />
                 <div className="relative bg-zinc-900/80 p-2.5 rounded-lg border border-zinc-800/50 group-hover:border-teal-500/30 transition-all duration-300">
                   <feature.icon className="w-5 h-5 text-teal-400" />

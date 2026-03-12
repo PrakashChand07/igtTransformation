@@ -24,28 +24,31 @@ export function Footer() {
       icon: Shield,
       title: '100% SECURE',
       subtitle: 'SSL Protected',
-      bgColor: 'bg-teal-500/20',
-      borderColor: 'border-teal-500/50',
-      iconColor: 'text-teal-400',
-      textColor: 'text-white'
+      bgColor: 'bg-teal-100',
+      borderColor: 'border-teal-200',
+      iconColor: 'text-teal-600',
+      textColor: 'text-black',
+      subtitleColor: 'text-gray-600'
     },
     {
       icon: BadgeCheck,
       title: 'MONEY BACK',
       subtitle: '100% Guarantee',
-      bgColor: 'bg-blue-500/20',
-      borderColor: 'border-blue-500/50',
-      iconColor: 'text-blue-400',
-      textColor: 'text-white'
+      bgColor: 'bg-blue-100',
+      borderColor: 'border-blue-200',
+      iconColor: 'text-blue-600',
+      textColor: 'text-black',
+      subtitleColor: 'text-gray-600'
     },
     {
       icon: Headphones,
       title: '24/7 SUPPORT',
       subtitle: 'Always Available',
-      bgColor: 'bg-amber-500/20',
-      borderColor: 'border-amber-500/50',
-      iconColor: 'text-amber-400',
-      textColor: 'text-white'
+      bgColor: 'bg-amber-100',
+      borderColor: 'border-amber-200',
+      iconColor: 'text-amber-600',
+      textColor: 'text-black',
+      subtitleColor: 'text-gray-600'
     }
   ];
 
@@ -217,10 +220,10 @@ export function Footer() {
                 >
                   <badge.icon className={`w-4 h-4 ${badge.iconColor}`} />
                   <div>
-                    <div className={`text-xs font-semibold ${badge.textColor}`}>
+                    <div className={`text-xs font-bold ${badge.textColor}`}>
                       {badge.title}
                     </div>
-                    <div className="text-[10px] text-gray-600">
+                    <div className={`text-[10px] font-medium mt-0.5 ${badge.subtitleColor}`}>
                       {badge.subtitle}
                     </div>
                   </div>

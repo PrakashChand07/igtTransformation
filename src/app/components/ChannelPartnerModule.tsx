@@ -3,11 +3,11 @@ import { Users, TrendingUp, FileText, CreditCard, BarChart3, Lock } from 'lucide
 
 export function ChannelPartnerModule() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-6 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/50 to-zinc-950" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Portal Mockup */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -19,11 +19,11 @@ export function ChannelPartnerModule() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 via-teal-500/10 to-amber-500/10 rounded-3xl blur-2xl" />
-              
+
               {/* Portal Container */}
               <div className="relative bg-zinc-900/90 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 shadow-2xl">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-zinc-800/50">
+                <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-zinc-800/50">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
                       <Users className="w-5 h-5 text-white" />
@@ -39,7 +39,7 @@ export function ChannelPartnerModule() {
                 </div>
 
                 {/* Stats Cards - Glassmorphism */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-xl" />
                     <div className="relative bg-zinc-950/50 backdrop-blur-xl border border-zinc-800/50 rounded-xl p-4 group-hover:border-teal-500/30 transition-all duration-300">
@@ -67,7 +67,7 @@ export function ChannelPartnerModule() {
 
                 {/* Inventory Table */}
                 <div className="bg-zinc-950/50 backdrop-blur-xl border border-zinc-800/50 rounded-xl p-4 mb-4">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <h4 className="text-white text-sm font-medium flex items-center gap-2">
                       <BarChart3 className="w-4 h-4 text-teal-400" />
                       Live Inventory
@@ -116,22 +116,22 @@ export function ChannelPartnerModule() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 backdrop-blur-sm mb-4 sm:mb-6">
               <span className="text-sm text-amber-300">Module C</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-4 sm:mb-6">
               Channel Partner Portals
               <span className="block bg-gradient-to-r from-amber-400 to-teal-400 bg-clip-text text-transparent mt-2">
                 That Actually Get Used
               </span>
             </h2>
 
-            <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
+            <p className="text-lg text-zinc-400 mb-6 lg:mb-8 leading-relaxed">
               Give your broker network real-time inventory access, automated commission tracking, and lead management tools they'll actually want to use. Premium glassmorphism design with mobile-first UX.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-6 lg:mb-8">
               {[
                 'Secure login system with role-based access control',
                 'Real-time inventory sync across all projects',

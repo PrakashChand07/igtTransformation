@@ -10,9 +10,9 @@ export function SocialProofSection() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-6 lg:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/30 to-zinc-950" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
@@ -20,9 +20,9 @@ export function SocialProofSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 lg:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-3 sm:mb-4">
             Trusted Across
             <span className="block bg-gradient-to-r from-teal-400 to-amber-400 bg-clip-text text-transparent mt-2">
               India's Luxury Markets
@@ -33,7 +33,7 @@ export function SocialProofSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* India Map Visualization */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -42,7 +42,7 @@ export function SocialProofSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative bg-zinc-900/60 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-8 shadow-2xl">
+            <div className="relative bg-zinc-900/60 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
               {/* Map Container */}
               <div className="relative aspect-[3/4] max-w-md mx-auto">
                 {/* India Outline (Simplified) */}
@@ -73,7 +73,7 @@ export function SocialProofSection() {
                     <div className="absolute inset-0 animate-ping">
                       <div className="w-12 h-12 rounded-full bg-teal-500/30" />
                     </div>
-                    
+
                     {/* Main Marker */}
                     <div className="relative w-12 h-12 flex items-center justify-center">
                       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 border-2 border-zinc-900 shadow-lg shadow-teal-500/50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cursor-pointer">
@@ -91,7 +91,7 @@ export function SocialProofSection() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-zinc-800/50">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-zinc-800/50">
                 {[
                   { label: 'Cities', value: '15+' },
                   { label: 'Developers', value: '50+' },
@@ -117,9 +117,9 @@ export function SocialProofSection() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-amber-500/10 via-teal-500/10 to-amber-500/10 rounded-3xl blur-2xl" />
-              
-              <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-8 shadow-2xl">
-                <div className="flex items-center justify-between mb-6">
+
+              <div className="relative bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/50 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                <div className="flex items-center justify-between mb-4 sm:mb-6">
                   <Quote className="w-12 h-12 text-teal-500/30" />
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -128,7 +128,7 @@ export function SocialProofSection() {
                   </div>
                 </div>
 
-                <p className="text-lg text-zinc-300 leading-relaxed mb-8 italic">
+                <p className="text-base sm:text-lg text-zinc-300 leading-relaxed mb-6 sm:mb-8 italic">
                   "We launched three premium projects last year. Their custom CRM handles everything—from broker networks to direct leads to site visits. No monthly fees, complete control over our data, and the WhatsApp integration alone has increased our conversion rate by 40%."
                 </p>
 

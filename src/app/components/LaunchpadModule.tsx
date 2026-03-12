@@ -3,11 +3,11 @@ import { Smartphone, Zap, Image, MapPin, Calendar } from 'lucide-react';
 
 export function LaunchpadModule() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-6 lg:py-10 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900/30 to-zinc-950" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -15,22 +15,22 @@ export function LaunchpadModule() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 backdrop-blur-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 backdrop-blur-sm mb-4 sm:mb-6">
               <span className="text-sm text-teal-300">Module B</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-4 sm:mb-6">
               Project Launch Sites
               <span className="block bg-gradient-to-r from-teal-400 to-amber-400 bg-clip-text text-transparent mt-2">
                 That Convert in 72 Hours
               </span>
             </h2>
 
-            <p className="text-lg text-zinc-400 mb-8 leading-relaxed">
+            <p className="text-lg text-zinc-400 mb-6 lg:mb-8 leading-relaxed">
               Mobile-first microsites custom-designed for each new project. Pre-registration forms, virtual tours, payment gateways, and CRM integration—live before your launch event.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4 mb-6 lg:mb-8">
               {[
                 { icon: Zap, text: '72-hour go-live guarantee from design to deployment' },
                 { icon: Image, text: 'Interactive 3D walkthroughs and gallery modules' },
@@ -77,12 +77,12 @@ export function LaunchpadModule() {
             <div className="relative">
               {/* Glow Effect */}
               <div className="absolute -inset-8 bg-gradient-to-r from-amber-500/20 via-teal-500/20 to-amber-500/20 rounded-[3rem] blur-3xl" />
-              
+
               {/* Phone Frame */}
               <div className="relative w-[280px] sm:w-[320px] bg-zinc-950 rounded-[2.5rem] p-3 border-4 border-zinc-800 shadow-2xl">
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-zinc-950 rounded-b-2xl z-10" />
-                
+
                 {/* Screen */}
                 <div className="relative bg-zinc-900 rounded-[2rem] overflow-hidden h-[580px]">
                   {/* Status Bar */}
@@ -100,7 +100,7 @@ export function LaunchpadModule() {
                       alt="Luxury Property"
                       className="w-full h-64 object-cover"
                     />
-                    
+
                     {/* Overlay Card */}
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}

@@ -25,13 +25,13 @@ export function Header() {
         className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between py-3">
+          <div className="flex items-center justify-between py-1">
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img
                 src='/assets/logo.png'
                 alt="IG Transformation Partners"
-                className="h-16 lg:h-24 w-auto cursor-pointer"
+                className="h-14 lg:h-20 w-auto cursor-pointer"
               />
             </Link>
 
